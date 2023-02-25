@@ -6,6 +6,9 @@ import { config as markdocConfig } from '@/markdoc/config'
 import Heading from '@/components/content/Heading'
 import PageToc from '@/components/PageToc'
 import { getHeadings } from '@/utils/functions'
+import TableSmall from '@/components/content/TableSmall'
+import TableResponsive from '@/components/content/TableResponsive'
+import FigureImg from '@/components/content/FigureImg'
 
 const getArticle = (slug: string) => {
   const article = allArticles.find((post) => post.slug === slug)
@@ -44,10 +47,10 @@ export default async function Post({
             {Markdoc.renderers.react(markdocContent, React, {
               components: {
                 Heading,
-                // TableSmall,
-                // FigureImg,
-                // TableResponsive,
-                // Sup: ({ children }) => <sup>{children}</sup>,
+                TableSmall,
+                TableResponsive,
+                FigureImg,
+                Sup: (props: any) => <sup {...props} />,
               },
             })}
           </div>

@@ -29,7 +29,6 @@ export const heading = {
 
     return new Tag(
       `Heading`,
-      // `h${node.attributes['level']}`,
       { ...attributes, ...node.attributes, id },
       children
     )
