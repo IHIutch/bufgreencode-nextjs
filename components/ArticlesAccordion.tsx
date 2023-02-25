@@ -86,7 +86,7 @@ export default function ArticlesAccordion() {
                           'block w-full truncate py-1.5 text-gray-600 hover:text-gray-900',
                           '-ml-px transition-all duration-200'
                         )}
-                        href={`/${section.slug}`}
+                        href={`${section.slug}`}
                       >
                         {/* {({ isActive }: { isActive: boolean }) => ( */}
                         <div

@@ -1,7 +1,7 @@
 import React from 'react'
 import Markdoc from '@markdoc/markdoc'
 import { allArticles } from 'contentlayer/generated'
-import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { config as markdocConfig } from '@/markdoc/config'
 import Heading from '@/components/content/Heading'
 import PageToc from '@/components/PageToc'
@@ -13,7 +13,7 @@ import FigureImg from '@/components/content/FigureImg'
 const getArticle = (slug: string) => {
   const article = allArticles.find((post) => post.slug === slug)
   if (!article) {
-    redirect('/404')
+    notFound()
   }
 
   const ast = Markdoc.parse(article.body.raw)

@@ -25,9 +25,9 @@ export default function SearchComponent() {
       {isOpen ? (
         <DocSearchModal
           initialScrollY={window.scrollY}
-          appId={import.meta.env.PUBLIC_ALGOLIA_APP_ID}
-          indexName={import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME}
-          apiKey={import.meta.env.PUBLIC_ALGOLIA_API_KEY}
+          appId={process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ''}
+          indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME || ''}
+          apiKey={process.env.NEXT_PUBLIC_ALGOLIA_API_KEY || ''}
           onClose={() => setIsOpen(false)}
           placeholder="Search the docs..."
           hitComponent={Hit}

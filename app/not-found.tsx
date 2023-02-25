@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function FourOhFour() {
+export default function NotFound() {
   return (
     <div className="flex">
       <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">
