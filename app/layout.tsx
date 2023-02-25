@@ -3,11 +3,7 @@ import NavbarComponent from '@/components/NavbarComponent'
 import SubnavComponent from '@/components/SubnavComponent'
 import type { ReactNode } from 'react'
 
-export default async function SidebarLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
+export default async function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>

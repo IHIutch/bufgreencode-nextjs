@@ -7,6 +7,7 @@ import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function ArticlesAccordion() {
   const activeSlug = usePathname()
@@ -82,12 +83,12 @@ export default function ArticlesAccordion() {
                 >
                   {groupedArticles[articleNum].map((section, sIdx) => (
                     <li key={sIdx}>
-                      <a
+                      <Link
                         className={clsx(
                           'block w-full truncate py-1.5 text-gray-600 hover:text-gray-900',
                           '-ml-px transition-all duration-200'
                         )}
-                        href={`${section.slug}`}
+                        href={`${section.slug}` as Route}
                       >
                         {/* {({ isActive }: { isActive: boolean }) => ( */}
                         <div
@@ -112,7 +113,7 @@ export default function ArticlesAccordion() {
                           </span>
                         </div>
                         {/* )} */}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

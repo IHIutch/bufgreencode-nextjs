@@ -3,6 +3,8 @@ import Image from 'next/image'
 import SearchComponent from './SearchComponent'
 import '../styles/main.css'
 import Link from 'next/link'
+import Logo from '../public/meta/bufgreencode-logo.svg'
+import Icon from '../public/meta/bufgreencode-icon.svg'
 
 export default function NavbarComponent() {
   return (
@@ -12,13 +14,13 @@ export default function NavbarComponent() {
           <div className="h-full w-16 flex-shrink-0 pl-4 md:w-40 lg:w-72 2xl:w-80">
             <div className="flex h-full items-center">
               <Link href="/" className="block h-full w-full py-2 lg:mr-4">
-                <img
-                  src="/meta/bufgreencode-icon.svg"
+                <Image
+                  src={Icon}
                   alt="Buffalo Green Code"
                   className="h-full w-auto md:hidden"
                 />
-                <img
-                  src="/meta/bufgreencode-logo.svg"
+                <Image
+                  src={Logo}
                   alt="Buffalo Green Code"
                   className="hidden h-full w-auto md:block"
                 />

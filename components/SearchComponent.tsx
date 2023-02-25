@@ -7,6 +7,7 @@ import type {
   InternalDocSearchHit,
   StoredDocSearchHit,
 } from '@docsearch/react/dist/esm/types'
+import Link from 'next/link'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
@@ -78,8 +79,8 @@ const Hit = ({
   children: ReactNode
 }) => {
   return (
-    <a
-      href={hit.url}
+    <Link
+      href={hit.url as Route}
       // className={clsx({
       //   'DocSearch-Hit--Result': hit?.__is_result?.(),
       //   // 'DocSearch-Hit--Parent': hit.__is_parent?.(),
@@ -89,6 +90,6 @@ const Hit = ({
       // })}
     >
       {children}
-    </a>
+    </Link>
   )
 }
