@@ -1,6 +1,9 @@
-import { Tag } from '@markdoc/markdoc'
+import { Config, Node, RenderableTreeNode, Tag } from '@markdoc/markdoc'
 
-const generateID = (children, attributes) => {
+const generateID = (
+  children: RenderableTreeNode[],
+  attributes: Record<string, any>
+) => {
   if (attributes.id && typeof attributes.id === 'string') {
     return attributes.id
   }
@@ -9,7 +12,7 @@ const generateID = (children, attributes) => {
     .join(' ')
     .replace(/[?]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/[./]/g, '-')
+    .replace(/[./]/g, '-') // or .replace(/[./]/g, '')
     .toLowerCase()
 }
 
@@ -18,7 +21,7 @@ export const heading = {
   attributes: {
     id: { type: String },
   },
-  transform(node, config) {
+  transform(node: Node, config: Config) {
     const attributes = node.transformAttributes(config)
     const children = node.transformChildren(config)
 

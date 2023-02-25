@@ -2,7 +2,9 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    typedRoutes: true,
   },
 }
 
-module.exports = nextConfig
+const { withContentlayer } = require('next-contentlayer')
+module.exports = withContentlayer({ ...nextConfig })
