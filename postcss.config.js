@@ -1,5 +1,4 @@
 module.exports = {
-  // parser: 'postcss-scss',
   plugins: {
     '@fullhuman/postcss-purgecss': {
       content: [
@@ -10,7 +9,6 @@ module.exports = {
       defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
     },
     '@csstools/postcss-sass': {},
-    'postcss-import': {},
     'tailwindcss/nesting': {},
     tailwindcss: {},
     autoprefixer: {},
