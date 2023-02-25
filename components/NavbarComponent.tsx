@@ -1,10 +1,10 @@
 import { ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import SearchComponent from './SearchComponent'
-import '../styles/main.css'
 import Link from 'next/link'
 import Logo from '../public/meta/bufgreencode-logo.svg'
 import Icon from '../public/meta/bufgreencode-icon.svg'
+import '../styles/main.scss'
 
 export default function NavbarComponent() {
   return (
