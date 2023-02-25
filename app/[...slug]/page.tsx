@@ -35,7 +35,7 @@ export default async function Post({
 
   return (
     <div className="flex">
-      <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">
+      <div className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]">
         <div className="max-w-prose xl:mx-auto">
           <h1 className="mb-2 text-5xl font-medium leading-tight">
             {article?.title}

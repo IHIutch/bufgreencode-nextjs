@@ -6,9 +6,10 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
+import { usePathname } from 'next/navigation'
 
 export default function ArticlesAccordion() {
-  const activeSlug = ''
+  const activeSlug = usePathname()
   const groupedArticles = groupBy(
     allArticles.sort(
       (a, b) =>
@@ -20,15 +21,15 @@ export default function ArticlesAccordion() {
   )
 
   const activeArticle = allArticles.find((a) => a.slug === activeSlug)
-  const activeArticleId = activeArticle?.article_number
 
   const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
     (articleNum) => {
-      return activeArticleId === Number(articleNum)
+      return activeArticle?.article_number === Number(articleNum)
     }
   )
+
   const [activeIdx, setActiveIdx] = useState(
-    defaultArticleIdx ? [`content-${defaultArticleIdx}`] : []
+    defaultArticleIdx !== -1 ? [`content-${defaultArticleIdx}`] : []
   )
 
   return (
