@@ -3,7 +3,7 @@ export const getHeadings = (
   sections: { id: string; title: string; level: number }[] = []
 ) => {
   if (node?.name) {
-    // 'Heading' is defined in markdoc/schema/heading.markdoc.js
+    // 'Heading' is defined in markdoc/node/heading.ts
     if (node.name.match('Heading')) {
       const title = node.children[0]
 

@@ -90,7 +90,6 @@ export default function ArticlesAccordion() {
                         )}
                         href={`${section.slug}` as Route}
                       >
-                        {/* {({ isActive }: { isActive: boolean }) => ( */}
                         <div
                           className={clsx(
                             'border-l-2 px-2',
@@ -112,7 +111,6 @@ export default function ArticlesAccordion() {
                             {section.title}
                           </span>
                         </div>
-                        {/* )} */}
                       </Link>
                     </li>
                   ))}
