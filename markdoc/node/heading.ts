@@ -1,4 +1,9 @@
-import { Config, Node, RenderableTreeNode, Tag } from '@markdoc/markdoc'
+import {
+  type Config,
+  type Node,
+  type RenderableTreeNode,
+  Tag,
+} from '@markdoc/markdoc'
 
 const generateID = (
   children: RenderableTreeNode[],

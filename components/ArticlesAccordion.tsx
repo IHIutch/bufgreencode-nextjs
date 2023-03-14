@@ -69,7 +69,7 @@ export default function ArticlesAccordion() {
               </Accordion.Trigger>
               <Accordion.Content
                 className={clsx(
-                  'overflow-hidden transition-all data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up',
+                  'data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden transition-all',
                   'py-1 pl-3'
                 )}
               >
