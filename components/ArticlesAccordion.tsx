@@ -8,6 +8,7 @@ import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { Route } from 'next'
 
 export default function ArticlesAccordion() {
   const activeSlug = usePathname()

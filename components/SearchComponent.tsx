@@ -8,6 +8,7 @@ import type {
   StoredDocSearchHit,
 } from '@docsearch/react/dist/esm/types'
 import Link from 'next/link'
+import { Route } from 'next'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
