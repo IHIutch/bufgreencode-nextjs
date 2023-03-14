@@ -15,7 +15,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
             </SubnavComponent>
           </div>
           <div className="mx-auto flex max-w-screen-2xl">
-            <div className="fixed top-0 hidden h-full flex-shrink-0 pt-16 md:block md:w-72 2xl:w-80">
+            <div className="fixed top-0 hidden h-full shrink-0 pt-16 md:block md:w-72 2xl:w-80">
               <nav className="sticky h-full overflow-y-auto border-r">
                 <div className="py-8">
                   <ArticlesAccordion />

@@ -8,10 +8,10 @@ import '../styles/main.scss'
 
 export default function NavbarComponent() {
   return (
-    <nav className="relative inset-x-0 z-20 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white">
+    <nav className="relative inset-x-0 z-20 flex h-16 shrink-0 border-b border-gray-200 bg-white">
       <div className="relative mx-auto w-full max-w-screen-2xl">
         <div className="flex h-full items-center">
-          <div className="h-full w-16 flex-shrink-0 pl-4 md:w-40 lg:w-72 2xl:w-80">
+          <div className="h-full w-16 shrink-0 pl-4 md:w-40 lg:w-72 2xl:w-80">
             <div className="flex h-full items-center">
               <Link href="/" className="block h-full w-full py-2 lg:mr-4">
                 <Image
@@ -32,7 +32,7 @@ export default function NavbarComponent() {
               <SearchComponent />
             </div>
           </div>
-          <div className="hidden h-full flex-shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80">
+          <div className="hidden h-full shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80">
             <Link
               href="/disclaimer"
               className="py-1 px-2 text-gray-700 hover:text-gray-900"

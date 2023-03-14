@@ -49,7 +49,7 @@ export default function SubnavComponent({
             </div>
           </div>
           <Collapsible.Content className="overflow-hidden transition-all data-[state=open]:animate-collapsable-down data-[state=closed]:animate-collapsable-up">
-            <nav className="z-0 flex h-full max-h-[calc(100vh-6.5rem)] flex-grow flex-col justify-between">
+            <nav className="z-0 flex h-full max-h-[calc(100vh-6.5rem)] grow flex-col justify-between">
               <div className="h-full overflow-y-auto">
                 <div className="py-2">{children}</div>
               </div>

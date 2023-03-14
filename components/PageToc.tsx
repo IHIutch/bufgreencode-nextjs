@@ -1,7 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
-import { MouseEvent, useEffect, useState } from 'react'
+import { type MouseEvent, useEffect, useState } from 'react'
 
 export default function PageToc({
   headings,
@@ -17,7 +17,7 @@ export default function PageToc({
     const setCurrent: IntersectionObserverCallback = (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          const { id } = entry.target
+          // const { id } = entry.target
           // if (id === onThisPageID) continue
           setCurrentHeading({
             slug: entry.target.id,
@@ -51,7 +51,7 @@ export default function PageToc({
 
   const onLinkClick = (e: MouseEvent) => {
     setCurrentHeading({
-      slug: e.currentTarget.getAttribute('href')!.replace('#', ''),
+      slug: (e.currentTarget.getAttribute('href') || '').replace('#', ''),
       text: e.currentTarget.textContent || '',
     })
   }
@@ -69,8 +69,8 @@ export default function PageToc({
               className={clsx(
                 'border-l-2 transition-all duration-200',
                 currentHeading.slug === heading.id
-                  ? ' border-green-700'
-                  : ' border-transparent'
+                  ? 'border-green-700'
+                  : 'border-transparent'
               )}
             >
               <div
